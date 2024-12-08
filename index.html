@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>My Pikat Inspired Website</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="scripts.js" defer></script>
+</head>
+<body>
+
+  <!-- Header Section -->
+  <header class="header">
+    <div class="logo">Sand.hoo</div>
+    <nav>
+      <ul id="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About me</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <!-- Hamburger Button -->
+      <button id="menu-toggle" class="menu-toggle">
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- Main Section (Hero) -->
+  <section class="hero">
+    <h1>Welcome to Sand.hoo</h1>
+    <div class="image-container">
+      <img class="hoo" src="images/Hoo2.png">
+      <img class="speech-bubble" src="images/speechBubble.png" alt="Speech Bubble">
+    </div>
+    <p>Hello everybody, my name is Sand and this is my website.</p>
+    <button id="cta-button" onclick="scrollToFeatures()">Get Started</button>
+  </section>
+
+  <!-- Features Section -->
+  
+  <section id="features" class="features hidden">
+    <h2>Features</h2>
+    <div class="features-container">
+      <div class="feature">
+        <h3>Feature 1</h3>
+        <p>Feature description here...</p>
+      </div>
+      <div class="feature">
+        <h3>Feature 2</h3>
+        <p>Feature description here...</p>
+      </div>
+      <div class="feature">
+        <h3>Feature 3</h3>
+        <p>Feature description here...</p>
+      </div>
+      <div class="feature">
+        <h3>Feature 4</h3>
+        <p>Feature description here...</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="footer">
+    <p>&copy; 2024 Sand.hoo</p>
+    <div>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Service</a>
+    </div>
+  </footer>
+
+</body>
+</html>
