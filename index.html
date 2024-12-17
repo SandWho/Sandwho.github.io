@@ -4,21 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>SiO2</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>Sand</title>
+  <link rel="stylesheet" href="mainStyles.css">
   <link rel="icon" href="images/SandBlock.png" type="image/icon type">
-  <script src="scripts.js" defer></script>
 </head>
 <body>
 
   <!-- Header Section -->
   <header class="header">
-    <img class="sandLogo" src="images/SandBlock.png">
+    <a href="index.html"><img class="sandLogo" src="images/SandBlock.png"></a>
     <nav>
       <ul id="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="#">About me</a></li>
-        <li><a href="#">Contact</a></li>
+        <li id="home"><a href="index.html">Home</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
       <!-- Hamburger Button -->
       <button id="menu-toggle" class="menu-toggle">
@@ -30,39 +28,39 @@
 
   <!-- Main Section (Hero) -->
   <section class="hero">
-    <h1>Welcome to Sand.hoo</h1>
+    <h1>Welcome to my website</h1>
     <div class="image-container">
       <img class="hoo" src="images/Hoo2.png">
       <img class="speech-bubble" src="images/speechBubble.png" alt="Speech Bubble">
     </div>
-    <p>Hello everybody, my name is Sand and this is my website.</p>
+    <p>hover over the image above to see a cool effect.<br>...Or just press the button below to get started.</p>
     <button id="cta-button" onclick="scrollToFeatures()">Get Started</button>
   </section>
 
   <!-- Features Section -->
   
   <section id="features" class="features hidden">
-    <h2>Features</h2>
+    <h2>Features(for now)</h2>
     <div class="features-container">
+      <a href="htmlSheet.html">
       <div class="feature">
-        <h3>Feature 1</h3>
-        <p>Feature description here...</p>
-      </div>
+        <h3>HTML Cheat Sheet</h3>
+        <p>Commonly used HTML tags to help in the process of learning HTML.</p>
+      </div></a>
+      <a href="CssSheet.html">
       <div class="feature">
-        <h3>Feature 2</h3>
-        <p>Feature description here...</p>
-      </div>
+        <h3>CSS Cheat Sheet</h3>
+        <p>Commonly used CSS properties to help in the process of learning CSS.</p>
+      </div></a>
+      <a href="#">
       <div class="feature">
-        <h3>Feature 3</h3>
-        <p>Feature description here...</p>
-      </div>
-      <div class="feature">
-        <h3>Feature 4</h3>
-        <p>Feature description here...</p>
-      </div>
+        <h3>About me</h3>
+        <p>Imformation about me and what I like to do in my free time.</p>
+      </div></a>
     </div>
   </section>
 
 
+<script src="mainScripts.js" defer></script>
 </body>
 </html>

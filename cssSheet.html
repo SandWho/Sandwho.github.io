@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>CSS Cheat Sheet</title>
+  <link rel="stylesheet" href="cssSheetStyles.css">
+  <link rel="icon" href="images/SandBlock.png" type="image/icon type">
+</head>
+<body>
+
+  <!-- Header Section -->
+  <header class="header">
+    <a href="index.html"><img class="sandLogo" src="images/SandBlock.png"></a>
+    <nav>
+      <ul id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <!-- Hamburger Button -->
+      <button id="menu-toggle" class="menu-toggle">
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- Main Section (Hero) -->
+  <section class="hero">
+    <h1>CSS Cheat Sheet</h1>
+    <p>Learn the most common Css properties.</p>
+    <p>Press the buttom below to display the properties.</p>
+    <p>Hover over the boxes to see what each proerty does. Left clicking the boxes will display the effect of each property.</p>
+    <button id="cta-button" onclick="scrollToFeatures()">Get Started</button>
+  </section>
+
+  <!-- Features Section -->
+
+  <section id="features" class="features hidden">
+  <hr><br>
+    <h2>Text and Font Styling</h2>
+    <div class="features-container2">
+      <div class="feature" id="feature1" onclick="color()">
+        <h3>Color</h3>
+        <p>Sets the text color.<br><code>color:#007BFF;</code></p>
+      </div>
+      <div class="feature" id="feature2" onclick="fontType()">
+        <h3>font-family</h3>
+        <p>Specifies the font type.<br><code>font-family: 'Times New Roman', Times, serif;</code></p>
+      </div>
+      <div class="feature" id="feature3" onclick="fontSize()">
+        <h3>font-size</h3>
+        <p>Sets the size of the font.<br><code>font-size:40px;</code></p>
+      </div>
+      <div class="feature" id="feature4" onclick="textDecoration()">
+        <h3>text-decoration</h3>
+        <p>Adds underline, line-through, etc.<br><code>text-decoration: underline;</code></p>
+      </div>
+    </div>
+
+    <br><hr><br>
+    <h2>Box Model Properties</h2>
+    <div class="features-container3">
+      <div class="feature" id="feature5" onclick="width()">
+        <h3>width</h3>
+        <p>Specifies the width of an element.<br><code>width: 300px;</code></p>
+      </div>
+      <div class="feature" id="feature6" onclick="height()">
+        <h3>height</h3>
+        <p>Specifies the height of an elelment.<br><code>height: 200px</code></p>
+      </div>
+      <div class="feature" id="feature7" onclick="margin()">
+        <h3>margin</h3>
+        <p>Sets the space outside the element.<br><code>margin: 60px;</code></p>
+      </div>
+      </div>
+      <div class="features-container4">
+      <div class="feature" id="feature8" onclick="padding()">
+        <h3>padding</h3>
+        <p>Sets the space inside the element.<br><code>padding: 30px;</code></p>
+      </div>
+      <div class="feature" id="feature9" onclick="border()">
+        <h3>border</h3>
+        <p>Defines the border around an element.<br><code>border: 2px solid Coral;</code></p>
+      </div>
+    </div>
+
+
+    <br><hr><br>
+    <h2>Background Styling</h2>
+    <div class="features-container2">
+      <div class="feature" id="feature10" onclick="backgroundColor()">
+        <h3>background-color</h3>
+        <p>Sets the background color.<br><code>background-color: rgb(20,20,20);</code></p>
+      </div>
+      <div class="feature" id="feature11" onclick="backgroundImage()">
+        <h3>background-image</h3>
+        <p>Sets a background image.<br><code>background-image: url('image.jpg');</code></p>
+      </div>
+      <div class="feature catBackground" id="feature12" onclick="backgroundRepeat()">
+        <h3>background-repeat</h3>
+        <p>Specifies whether and how the background image repeats<br><code>background-repeat: no-repeat;</code></p>
+      </div>
+      <div class="feature punBackground" id="feature13" onclick="backgroundPosition()">
+        <h3>background-position</h3>
+        <p>Defines the starting position of the background image.<br><code>background-position:center bottom;</code></p>
+      </div>
+    </div>
+
+    <br><hr><br>
+    <h2>Display and Visibility</h2>
+    <div class="features-container2">
+      <div class="feature" id="feature14" onclick="display()">
+        <h3>display</h3>
+        <p>Controls how an element is displayed.<br><code>display: none;</code></p>
+      </div>
+      <div class="feature" id="feature15" onclick="visibility()">
+        <h3>visibility</h3>
+        <p>Controls element visibility.<br><code>visibility: hidden;</code></p>
+      </div>
+    </div>
+
+    <button onclick="showMore()" id="showMore">Show More</button>
+    <div id="moreContent" class="moreExplanation hidden">
+      <p>The display and visibility properties in CSS are used to control the visibility and rendering of HTML elements, 
+        but they behave differently.<br><br>
+        <!--DISPLAY-->
+        <h3>The Display Property</h3>
+        The display property determines how an element is rendered and whether it occupies space in the layout.<br>
+        <strong>Key Points:</strong>
+      <ul>
+      <li>Setting <code>display: none;</code> removes the element entirely from the document flow.</li>
+      <li>It will not occupy any space in the layout.</li>
+      <li>Child elements of the element are also not rendered.</li>
+      <li>Default Display Values: Block-level elements (e.g., div, p) have <strong>display: block.</strong> Inline elements (e.g., span, a) have <strong>display: inline.</strong></li>
+      </ul><br>
+      <!--Strong-->
+      <h3>The Visibility Property</h3>
+      The visibility property hides the element visually but does not remove it from the document flow.<br>
+      <strong>Key Points:</strong>
+      <ul>
+      <li>Setting <code>visibility: hidden;</code> makes the element invisible, but it still occupies space in the layout.</li>
+      <li>Child elements of the hidden element are also invisible but still occupy space.</li>
+      <li>The element remains part of the layout, so it affects positioning and space around it.</li>
+      </ul><br>
+    </p>
+  </div>
+    <button onclick="showLess()" id="showLess" class="hidden">Show Less</button>
+
+  </section>
+
+
+<script src="cssSheetScripts.js" defer></script>
+</body>
+</html>

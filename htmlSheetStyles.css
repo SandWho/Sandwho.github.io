@@ -1,0 +1,294 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth; /* Enable smooth scrolling for anchor links */
+}
+
+.hidden {
+    display: none;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: rgb(63, 63, 63); /* White background for everything */
+    color: black; /* Black text color */
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(63, 63, 63); /* White background */
+    color: rgb(184, 171, 37); /* Black text */
+    padding: 20px;
+    position: relative;
+    margin: 0 20px;
+}
+
+.header .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.header .sandLogo
+{
+    width:50px; 
+}
+
+
+/* Navigation Menu */
+.header nav {
+    display: flex;
+    align-items: center;
+}
+
+.header nav ul {
+    display: flex;
+    list-style: none;
+}
+
+.header nav ul li {
+    margin-left: 20px;
+    
+}
+
+
+.header nav ul li a {
+    color: white; /* Black links */
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Hamburger Menu - Transparent Background, Two White Lines */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 35px;
+    height: 25px;
+    background: none; /* Transparent background */
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+    padding: 5px;
+}
+
+.menu-toggle span {
+    display: block;
+    height: 4px; /* Height of each line */
+    background-color: black; /* Black color for the lines */
+    border-radius: 2px;
+    width: 100%; /* Ensure lines stretch across the button */
+}
+
+/* Responsive Design: Mobile View */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex; /* Make button visible on mobile */
+    }
+
+    /* Hide navigation links initially */
+    .header nav ul {
+        display: none;
+    }
+
+    /* Show navigation links when active */
+    .header nav.active ul {
+        display: flex;
+        flex-direction: column;
+        background-color: white; /* White background for mobile menu */
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    .header nav ul li {
+        text-align: center;
+        margin: 10px 0;
+    }
+}
+
+/* Hero Section */
+.hero {
+    background: rgb(40, 40, 40); /* White background */
+    color: White; /* Black text */
+    text-align: center;
+    padding: 100px 20px;
+    margin: 0 20px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+
+
+
+.hero button {
+    background-color: #42aaff; /* Blue background for button */
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.hero button:hover {
+    background-color: #007BFF;
+}
+
+/* Features Section */
+.features {
+    text-align: center;
+    padding: 50px 20px;
+    margin: 0 20px;
+    margin-top: 20px;
+    background-color: rgb(40, 40, 40);
+    color:white;
+}
+
+.features h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.features-container2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    justify-content: center;
+    margin: 0 20px;
+}
+
+
+.features-container3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    justify-content: center;
+    margin: 0 20px;
+}
+
+.features-container4 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    justify-content: center;
+    margin: 0 20px;
+    padding:40px
+}
+
+:root{
+--box-width:900px;
+}
+
+.feature {
+    padding: 40px;
+    padding-top:4em;
+    padding-bottom: 4em;
+    background-color: rgb(46, 46, 46); /* Darker gray background */
+    color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    max-width: 600px; /* Increase the max-width to make the boxes bigger */
+    width: 100%;
+    margin: 0 auto;
+    transition: transform 0.3s ease;
+}
+
+.features-container2 .feature
+{
+    padding-top:6em;
+    padding-bottom:6em;
+}
+
+.features-container3 .feature
+{
+    padding-top:3em;
+    padding-bottom:3em;
+}
+
+
+.features-container4 .feature
+{
+    padding-top:3em;
+    padding-bottom:3em;
+}
+
+.feature:hover {
+    transform: scale(1.1); /* Scale the feature box to 110% of its original size */
+}
+
+.feature h3 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+
+.feature .explanation {
+    font-size: 18px;
+    line-height: 1.8;
+    visibility: hidden;
+    transition: opacity 0.3s ease; 
+}
+
+.feature:hover .explanation {
+    visibility: visible; /* Show the paragraph */
+    opacity: 1;
+}
+
+.features button
+{
+    background-color: #42aaff; /* Blue background for button */
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    position: relative;
+    margin-bottom: 20px;
+    margin-top:20px;
+}
+
+.features button:hover{
+    background-color: #007BFF;
+}
+
+
+.moreExplanation
+{
+    padding:20px;
+    font-size:18px;
+    text-align: left;
+}
+
+
+.moreExplanation li
+{
+    list-style:inside;
+}
+
+/* Responsive Design: Features on Mobile */
+@media (max-width: 768px) {
+    .features-container2, .features-container3, .features-container4  {
+        grid-template-columns: 1fr; /* 1 box per row on mobile */
+    }
+
+    .feature {
+        max-width: 90%; /* Adjust width on mobile */
+    }
+}

@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Cheat Sheet</title>
+  <link rel="stylesheet" href="htmlSheetStyles.css">
+  <link rel="icon" href="images/SandBlock.png" type="image/icon type">
+</head>
+<body>
+
+  <!-- Header Section -->
+  <header class="header">
+    <a href="index.html"><img class="sandLogo" src="images/SandBlock.png" alt="Logo"></a>
+    <nav>
+      <ul id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <button id="menu-toggle" class="menu-toggle">
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>HTML Cheat Sheet</h1>
+    <p>Learn the most common HTML tags and their usage!</p>
+    <p>Hover over boxes to learn about what the tags do.</p>
+    <button onclick="scrollToFeatures()">Explore Tags</button>
+  </section>
+
+  <!-- Cheat Sheet Section -->
+  <section id="features" class="features hidden">
+    <h2>Basic Tags</h2>
+    <div class="features-container2">
+      <div class="feature">
+        <h3>&lt;html&gt; &lt;/html&gt;</h3>
+        <p class="explanation">Creates an HTML document.</p>
+      </div>
+      <div class="feature">
+        <h3>&lt;head&gt; &lt;/head&gt;</h3>
+        <p class="explanation">Sets off the title & other info that isn't displayed.</p>
+      </div>
+      <div class="feature">
+        <h3>&lt;body&gt; &lt;/body&gt;</h3>
+        <p class="explanation">Sets off the visible portion of the document.</p>
+      </div>
+      <div class="feature">
+        <h3>&lt;title&gt; &lt;/title&gt;</h3>
+        <p class="explanation">Puts name of the document in the title bar;<br>bookmarking pages, this is what is bookmarked.</p>
+      </div>
+    </div>
+    
+    <button onclick="basicTag1()" id="showMore1">Show More</button>
+    <div id="basicTags" class="moreExplanation hidden">
+        <p>All the basic HTML tags can be described as structural elements that form the foundation of an HTML document.<br>
+        Together, they:
+        <ul>
+        <li>Define the structure and layout of a webpage.</li>
+        <li>Provide a clear hierarchy for content (e.g., &lt;html&gt; as the root, &lt;head&gt; for metadata, and &lt;body&gt; for visible content).</li>
+        <li>Act as the building blocks of any webpage, ensuring browsers understand how to render the document correctly.</li>
+        <li>In essence, these tags establish the framework for organizing and presenting content on the web.</li>
+        </ul>
+      </p>
+    </div>
+    <button onclick="basicTag2()" id="showLess1" class="hidden">Show Less</button>
+
+      <!--FORMATTING TAGS START HERE-->
+    <br><hr>
+    <h2>Formatting</h2>
+    <div class="features-container2">
+        <div class="feature">
+          <h3>&lt;p&gt;</h3>
+          <p class="explanation">Defines a paragraph of text.</p>
+        </div>
+        <div class="feature">
+          <h3>&lt;br&gt;</h3>
+          <p class="explanation">Inserts a line break.</p>
+        </div>
+        <div class="feature">
+          <h3>&lt;div&gt; &lt;/div&gt;</h3>
+          <p class="explanation">Used to format block content with CSS.<br>Defines a container or division in the document.</p>
+        </div>
+        <div class="feature">
+          <h3>&lt;span&gt; &lt;/span&gt;</h3>
+          <p class="explanation">Used to format inline content with CSS.</p>
+        </div>
+      </div>
+      
+      
+      <button onclick="formattingTag1()" id="showMore2">Show More</button>
+      <div id="formattingTags" class="moreExplanation hidden">
+        <p>Formatting tags in HTML play a crucial role in structuring and styling content so it can be clean, modular,
+           and visually appealing. They help define how content should appear on a webpage and allow for better organization of the layout.<br>
+          Here's an in-depth explanation of the formatting tags:<br><br>
+          <!--Paragraph-->
+          <h3>Paragraph Tag (&lt;p&gt;)</h3>
+        <ul>
+        <li>Defines a paragraph of text.</li>
+        <li>Adds vertical spacing before and after the paragraph to separate content.</li>
+        <li>Groups sentences or blocks of text into distinct sections.</li>
+        <li>Useful for displaying long bodies of text, articles, blog posts, or any written content that needs proper spacing.</li>
+        </ul><br>
+        <!--br tag-->
+        <h3>Line Break Tag (&lt;br&gt;)</h3>
+        <ul>
+        <li>Inserts a single line break.</li>
+        <li>Forces content following it to appear on the next line.</li>
+        <li>It is an empty tag (no closing tag required).</li>
+        <li>Ideal for breaking lines in places where paragraphs are not required, such as addresses, poetry, or form content.</li>
+        </ul><br>
+        <!--Division tag-->
+        <h3>Division Tag (&lt;div&gt;)</h3>
+        <ul>
+        <li>Acts as a "box" to wrap multiple elements together.</li>
+        <li>Has no inherent styling but is often used with CSS to apply layout, spacing, or design.</li>
+        <li>Widely used for: Structuring layout components (e.g., headers, sidebars, or footers).</li>
+        </ul><br>
+        <!--Span-->
+        <h3>Inline Container Tag (&lt;span&gt;)</h3>
+        <ul>
+        <li>Defines an inline container for small sections of text.</li>
+        <li>Similar to &lt;div&gt;, but inline, meaning it does not break into a new line.</li>
+        <li>Typically used for applying CSS styles or JavaScript to a specific portion of text.</li>
+        </ul><br>
+      </p>
+    </div>
+    
+
+    <button onclick="formattingTag2()" id="showLess2" class="hidden">Show less</button>
+
+    
+    <!--TEXT TAGS START HERE-->
+      <br><hr>
+      <h2>Text Tags</h2>
+      <div class="features-container3">
+          <div class="feature">
+            <h3>&lt;h1&gt; &lt;/h1&gt; to &lt;h6&gt; &lt;/h6&gt; </h3>
+            <p class="explanation">Creates headlines -- H1=largest, H6=smallest.</p>
+          </div>
+          <div class="feature">
+            <h3>&lt;Strong&gt; &lt;/strong&gt;</h3>
+            <p class="explanation">Emphasizes a word (usually processed in bold).</p>
+          </div>
+          <div class="feature">
+            <h3>&lt;em&gt; &lt;/em&gt;</h3>
+            <p class="explanation">Emphasizes a word (usually processed in italics).</p>
+          </div>
+          <div class="feature">
+            <h3>&lt;address&gt; &lt;/address&gt;</h3>
+            <p class="explanation">Creates address section (usually processed in italics).</p>
+          </div>
+          <div class="feature">
+            <h3>&lt;pre&gt; &lt;/pre&gt;</h3>
+            <p class="explanation">Creates preformatted text.</p>
+          </div>
+          <div class="feature">
+            <h3>&lt;cite&gt; &lt;/cite&gt;</h3>
+            <p class="explanation">Creates a citation (Usually processed in italics).</p>
+          </div>
+        </div>
+        
+        
+        <button onclick="textTag1()" id="showMore3">Show More</button>
+        <div id="textTags" class="moreExplanation hidden">
+          <p>Text tags in HTML are used to define the hierarchy, emphasis, and meaning of text content.
+             They improve both the visual presentation and the semantic meaning of the content, making it easier for browsers, search engines, 
+             and assistive technologies to interpret the information.<br>
+
+            Here's a detailed explanation of the Text Tags:<br><br>
+            <!--Headings-->
+            <h3>Heading Tags(&lt;h1&gt; to &lt;h6&gt;)</h3>
+          <ul>
+          <li>Create headings of varying levels, where &lt;h1&gt; is the largest and &lt;h6&gt; is the smallest.</li>
+          <li>Headings convey a hierarchy for your content.</li>
+          <li>Search engines use headings to understand the structure and importance of your content.</li>
+          <li>Visually, headings appear bold and larger than normal text.</li>
+          </ul><br>
+          <!--Strong-->
+          <h3>Strong Tag(&lt;strong&gt;)</h3>
+          <ul>
+          <li>Emphasizes important content, typically displayed as bold text.</li>
+          <li>Adds semantic meaning, signaling to search engines and screen readers that the content is significant.</li>
+          <li>Use it when you want to draw attention to critical information, such as warnings, key points, or important terms.</li>
+          </ul><br>
+          <!--EM tag-->
+          <h3>Emphasis Tag (&lt;em&gt;)</h3>
+          <ul>
+          <li>Emphasizes text, usually displayed in italic.</li>
+          <li>Adds semantic meaning, signaling subtle emphasis (e.g., stress or tone) to screen readers and search engines.</li>
+          <li>Use it to indicate stress or focus on specific words within a sentence (e.g., book titles, quotes, or key phrases).</li>
+          </ul><br>
+          <!--address tag-->
+          <h3>Address Content Tag (&lt;address&gt;)</h3>
+          <ul>
+          <li>Formats contact information, often displayed in italic.</li>
+          <li>Indicates that the enclosed text represents contact information or addresses.</li>
+          <li>Use it for contact details or author information in a structured and semantic way.</li>
+          </ul><br>
+           <!--Preformatted Text tag-->
+           <h3>Preformatted Text Tag (&lt;pre&gt;)</h3>
+           <ul>
+           <li>Preserves both spaces and line breaks as they are written.</li>
+           <li>Displays text in a monospaced font (like a code editor).</li>
+           <li>Retains whitespace and line breaks exactly as written in the HTML file.</li>
+           <li>Commonly used for displaying code snippets and showing content where formatting (spacing, indents, and line breaks) matters.</li>
+           </ul><br>
+           <!--Cite tag-->
+           <h3>Citation Tag (&lt;cite&gt;)</h3>
+           <ul>
+           <li>Marks text as a citation, often rendered in italic.</li>
+           <li>Indicates a reference to a source, such as a book, article, or author.</li>
+           </ul><br>
+        </p>
+      </div>
+
+      
+      <button onclick="textTag2()" id="showLess3" class="hidden">Show less</button>
+
+      <!--LIST TAGS START HERE-->
+      <br><hr>
+      <h2>List Tags</h2>
+      <div class="features-container3">
+          <div class="feature">
+            <h3>&lt;ul&gt; &lt;/ul&gt;</h3>
+            <p class="explanation">Creates an unordered list.</p>
+          </div>
+          <div class="feature">
+            <h3>&lt;ol start=?&gt; &lt;/ol&gt;</h3>
+            <p class="explanation">Creates an ordered list (start=xx, where xx is a counting number).</p>
+          </div>
+          <div class="feature">
+            <h3>&lt;li&gt; &lt;/li&gt;</h3>
+            <p class="explanation">Encompasses each list item.</p>
+          </div>
+          <div class="feature">
+            <h3>&lt;dl&gt; &lt;/dl&gt;</h3>
+            <p class="explanation">Creates a definition list.</p>
+          </div>
+          <div class="feature">
+            <h3>&lt;dt&gt;</h3>
+            <p class="explanation">Precedes eachdefintion term.</p>
+          </div>
+          <div class="feature">
+            <h3>&lt;dd&gt;</h3>
+            <p class="explanation"> Precedes eachdefintion.</p>
+          </div>
+        </div>
+        
+        <button onclick="listTag1()" id="showMore4">Show More</button>
+        <div id="listTags" class="moreExplanation hidden">
+          <p>List tags in HTML are used to organize and present content in a structured way, 
+            typically as bulleted, numbered, or descriptive lists. They improve readability and help logically categorize information.<br>
+
+            Here's a comprehensive explanation of the List Tags:<br><br>
+            <!--UNORDERED LIST-->
+            <h3>Unordered List(&lt;ul&gt;)</h3>
+          <ul>
+          <li>Creates a list of items with bullets.</li>
+          <li>tems are displayed with bullets (default style).</li>
+          <li>The order of the list does not matter.</li>
+          <li>Use for lists where the order is not important, such as menus, checklists, or feature lists.</li>
+          </ul><br>
+          <!-- Ordered List-->
+          <h3>Ordered List(&lt;ol&gt;)</h3>
+          <ul>
+          <li>Creates a list of items with numbers or sequential markers.</li>
+          <li>Items are numbered (1, 2, 3…) by default.</li>
+          <li>The order of the list matters.</li>
+          <li>Use for steps in a process, rankings, or any content requiring a specific order.</li>
+          </ul><br>
+          <!--LIST tag-->
+          <h3>List Item (&lt;li&gt;)</h3>
+          <ul>
+          <li>Defines an individual list item inside &lt;ul&gt;, &lt;ol&gl;, or &lt;dl&gl;.</li>
+          <li>Each &lt;li&gt; creates a new item within the list.</li>
+          <li>The content inside &lt;li&gt; can include text, links, images, or other HTML elements.</li>
+          <li>Wrap every item in a list (unordered or ordered) within &lt;li&gt; tags.</li>
+          </ul><br>
+          <!--Definition list tag-->
+          <h3>Definition List (&lt;dl&gt;)</h3>
+          <ul>
+          <li>Creates a list of terms and their definitions.</li>
+          <li>&lt;dt&gt;: Represents the term (definition term).</li>
+          <li>&lt;dd&gt;: Represents the definition of the term.</li>
+          <li>Use for glossaries, FAQs, or any content requiring term-definition pairs.</li>
+          </ul><br>
+           <!--Preformatted Text tag-->
+           <h3>Preformatted Text Tag (&lt;pre&gt;)</h3>
+           <ul>
+           <li>Preserves both spaces and line breaks as they are written.</li>
+           <li>Displays text in a monospaced font (like a code editor).</li>
+           <li>Retains whitespace and line breaks exactly as written in the HTML file.</li>
+           <li>Commonly used for displaying code snippets and showing content where formatting (spacing, indents, and line breaks) matters.</li>
+           </ul><br>
+           <!--Cite tag-->
+           <h3>Citation Tag (&lt;cite&gt;)</h3>
+           <ul>
+           <li>Marks text as a citation, often rendered in italic.</li>
+           <li>Indicates a reference to a source, such as a book, article, or author.</li>
+           </ul><br>
+        </p>
+      </div>
+
+      
+      <button onclick="listTag2()" id="showLess4" class="hidden">Show less</button>
+
+  </section>
+
+
+  
+<script src="htmlsheetScripts.js" defer></script>
+</body>
+</html>

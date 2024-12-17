@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth; /* Enable smooth scrolling for anchor links */
+}
+
+.hidden {
+    display: none;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: rgb(255, 255, 255); /* White background for everything */
+    color: black; /* Black text color */
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white; /* White background */
+    color: black; /* Black text */
+    padding: 20px;
+    position: relative;
+    margin: 0 20px;
+}
+
+.header .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.header .sandLogo
+{
+    width:50px; 
+}
+
+
+/* Navigation Menu */
+.header nav {
+    display: flex;
+    align-items: center;
+}
+
+.header nav ul {
+    display: flex;
+    list-style: none;
+}
+
+.header nav ul li {
+    margin-left: 20px;
+}
+
+.header nav ul li a {
+    color: black; /* Black links */
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.header #contact
+{
+    border-bottom: 2px solid black;
+}
+
+/* Hamburger Menu - Transparent Background, Two White Lines */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 35px;
+    height: 25px;
+    background: none; /* Transparent background */
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+    padding: 5px;
+}
+
+.menu-toggle span {
+    display: block;
+    height: 4px; /* Height of each line */
+    background-color: black; /* Black color for the lines */
+    border-radius: 2px;
+    width: 100%; /* Ensure lines stretch across the button */
+}
+
+/* Responsive Design: Mobile View */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex; /* Make button visible on mobile */
+    }
+
+    /* Hide navigation links initially */
+    .header nav ul {
+        display: none;
+    }
+
+    /* Show navigation links when active */
+    .header nav.active ul {
+        display: flex;
+        flex-direction: column;
+        background-color: white; /* White background for mobile menu */
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    .header nav ul li {
+        text-align: center;
+        margin: 10px 0;
+    }
+}
+
+
+
+.contactMe
+{
+    margin-left:230px;
+    margin-top:50px;
+}
+
+.contactMe h2
+{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size:130px;
+    color:rgb(242, 91, 41);
+}
+
+.contactMe p
+{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size:30px;
+}
