@@ -111,7 +111,7 @@ body {
 
 /* Hero Section */
 .hero {
-    background: rgb(20, 20, 20); /* White background */
+    background: rgb(34, 34, 34); /* White background */
     color: White; /* Black text */
     text-align: center;
     padding: 50px 20px;
@@ -156,30 +156,14 @@ body {
     margin-bottom: 40px;
 }
 
-.features-container2 {
+
+
+.features-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 30px;
     justify-content: center;
     margin: 0 20px;
-}
-
-
-.features-container3 {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-    justify-content: center;
-    margin: 0 20px;
-}
-
-.features-container4 {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-    justify-content: center;
-    margin: 0 20px;
-    padding:40px
 }
 
 :root{
@@ -276,7 +260,7 @@ body {
 
 /* Responsive Design: Features on Mobile */
 @media (max-width: 768px) {
-    .features-container2, .features-container3, .features-container4 {
+    .features-container {
         grid-template-columns: 1fr; /* 1 box per row on mobile */
     }
 
@@ -286,94 +270,28 @@ body {
 }
 
 
+.content
+{
+    margin:20px;
+}
 
-/* Toggleable styling for each box */
-.textColor
-{
-    color:#007BFF;
-}
-.fontType
-{
-    font-family: 'Times New Roman', Times, serif;
-}
-.fontSize p
+.content h3
 {
     font-size:40px;
 }
-.textDecoration
+
+.content h4
 {
-    text-decoration: underline;
+    color:rgb(255, 104, 62);
+    font-size:25px;
 }
-.width
+.content p
 {
-    width:300px;
-}
-.height
-{
-    height:200px;
-}
-.margin p
-{
-    margin:60px;
-}
-.padding p
-{
-    padding: 30px;
-}
-.border p
-{
-    border: 2px solid Coral;
-}
-.backgroundColor
-{
-    background-color: rgb(20,20,20);
-}
-.backgroundImage
-{
-    background-image:url("images/warumono.png");
-    background-size:cover;
-    background-position: center;
-    color:Yellow;
-    text-shadow: 1px 1px Black;
+    font-size:20px;
 }
 
-.catBackground
+.subHeading
 {
-    background-image:url("images/Cathing.png");
-    background-repeat: repeat;
-    background-size:100px;
-    color: white;
-    text-shadow: 0px 0px 10px Black;
     font-weight: bold;
-}
-.catBackground p
-{
-    font-size: 20px;
-}
-.backgroundRepeat
-{
-    background-size: auto 100%;
-    background-repeat: no-repeat;
-    background-position:center;
-}
-
-.punBackground
-{
-    background-image:url("images/pun.jpg");
-    background-repeat: no-repeat;
-    background-position: left left;
-    text-shadow: 0px 0px 10px Black;
-}
-.backgroundPosition
-{
-    background-position:center bottom;
-}
-
-.display
-{
-    display: none;
-}
-.visibility
-{
-    visibility: hidden;
+    color:rgb(174, 255, 131);
 }

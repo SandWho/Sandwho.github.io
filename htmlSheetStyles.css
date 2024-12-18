@@ -80,7 +80,7 @@ body {
 .menu-toggle span {
     display: block;
     height: 4px; /* Height of each line */
-    background-color: black; /* Black color for the lines */
+    background-color: white; /* Black color for the lines */
     border-radius: 2px;
     width: 100%; /* Ensure lines stretch across the button */
 }
@@ -100,7 +100,7 @@ body {
     .header nav.active ul {
         display: flex;
         flex-direction: column;
-        background-color: white; /* White background for mobile menu */
+        background-color: rgb(63, 63, 63); /* White background for mobile menu */
         position: absolute;
         top: 60px;
         left: 0;

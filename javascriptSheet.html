@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Javascript Cheat Sheet</title>
+  <link rel="stylesheet" href="javascriptSheetStyles.css">
+  <link rel="icon" href="images/SandBlock.png" type="image/icon type">
+</head>
+<body>
+
+  <!-- Header Section -->
+  <header class="header">
+    <a href="index.html"><img class="sandLogo" src="images/SandBlock.png"></a>
+    <nav>
+      <ul id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <!-- Hamburger Button -->
+      <button id="menu-toggle" class="menu-toggle">
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- Main Section (Hero) -->
+  <section class="hero">
+    <h1>Javascript cheat Sheet</h1>
+    <p>click the button below to learn about the basics of javascript</p>
+    <button id="cta-button" onclick="scrollToFeatures()">Explore</button>
+  </section>
+
+  <!-- Features Section -->
+
+  <section id="features" class="features hidden">
+  <hr><br>
+    <h2>click the boxes to display the information</h2>
+    <div class="features-container">
+      <div class="feature" onclick="variable()">
+        <h3>Variables</h3>
+      </div>
+      <div class="feature" onclick="arrays()">
+        <h3>Arrays</h3>
+      </div>
+      <div class="feature" onclick="operators()">
+        <h3>Operators</h3>
+      </div>
+      <div class="feature" onclick="functions()">
+        <h3>Functions</h3>
+      </div>
+      <div class="feature" onclick="loops()">
+        <h3>Loops</h3>
+      </div>
+      <div class="feature" onclick="ifelse()">
+        <h3>If - Else Statements</h3>
+      </div>
+      <div class="feature" onclick="strings()">
+        <h3>Strings</h3>
+      </div>
+      <div class="feature" onclick="regularExpressions()">
+        <h3>Regular Expressions</h3>
+      </div>
+    </div>
+
+    <div class="content">
+
+      <!-- VARIABLES -->
+      <div id="variables" class="moreExplanation hidden">
+        <hr>
+        <h3>Variables</h3>
+        <h4>var</h4>
+        <p>The most common variable. Can be reassigned but only accessed within a function. Variables
+          defined with var move to the top when code is executed.</p>
+        <h4>const</h4>
+        <p>Cannot be reassigned and not accessible before they appear within the code</p>
+        <h4>let</h4>
+        <p>Similar to const, however, let variable can be reassigned but not re-declared.</p>
+        <br><p><strong>Data Type</strong></p><br>
+        <h4>var age = 23</h4>
+        <p>Numbers</p>
+        <h4>var x</h4>
+        <p>Variables</p>
+        <h4>var a = "init"</h4>
+        <p>Text (Strings)</p>
+        <h4>var b = 1 + 2 + 3</h4>
+        <p>Operations</p>
+        <h4>var c = true</h4>
+        <p>True or False statements</p>
+        <h4>const PI = 3.14</h4>
+        <p>Constant Numbers</p>
+        <h4>var name = {firstName:"John", lastName:”Doe"}</h4>
+        <p>Objects</p>
+        <p class="subHeading">Objects</p>
+        <p><code>var person = {
+          firstName:"John",
+          lastName:"Doe",
+          age:20,
+          nationality:"German"
+          };
+        </code></p>
+      </div>
+
+      <!-- ARRAYS -->
+
+      <div id="arrays" class="moreExplanation hidden">
+        <hr>
+        <h3>Arrays</h3>
+        <p>var fruit = ["Banana", "Apple", "Pear"];</p>
+        <p class="subHeading">Array Methods</p>
+        <h4>concat()</h4>
+        <p>Join several arrays into one.</p>
+        <h4>indexOf()</h4>
+        <p>Returns the first position at which a given element appears in an array.</p>
+        <h4>join()</h4>
+        <p>Combine elements of an array into a single string and return the string.</p>
+        <h4>lastIndexOf()</h4>
+        <p>Gives the last position at which a given element appears in an array.</p>
+        <h4>pop()</h4>
+        <p>Removes the last element of an array.</p>
+        <h4>push()</h4>
+        <p>Add a new element at the end.</p>
+        <h4>reverse()</h4>
+        <p>Reverse the order of the elements in an array.</p>
+        <h4>shift()</h4>
+        <p>Remove the first element of an array.</p>
+        <h4>slice()</h4>
+        <p>Pulls a copy of a portion of an array into a new array</p>
+        <h4>sort()</h4>
+        <p>Sorts elements alphabetically.</p>
+        <h4>splice()</h4>
+        <p>Adds elements in a specified way and position.</p>
+        <h4>toString()</h4>
+        <p>Converts elements to strings.</p>
+        <h4>unshift()</h4>
+        <p>Adds a new element to the beginning.</p>
+        <h4>valueOf()</h4>
+        <p>Returns the primitive value of the specified object.</p>
+      </div>
+
+
+      <!--OPERATORS-->
+      <div id="operators" class="moreExplanation hidden">
+        <hr>
+        <h3>Operators</h3>
+        <p class="subHeading">Basic Operators</p>
+        <h4>+ Addition</h4>
+        <h4>- Subtraction</h4>
+        <h4>* Multiplication</h4>
+        <h4>/ Division</h4>
+        <h4>(..) Grouping operator</h4>
+        <h4>% Modulus (remainder)</h4>
+        <h4>++ Increment numbers</h4>
+        <h4>-- Decrement numbers</h4>
+        <p class="subHeading">Comparison Operators</p>
+        <h4>== Equal to</h4>
+        <h4>=== Equal value and equal type</h4>
+        <h4>!= Not equal</h4>
+        <h4>!== Not equal value or not equal type</h4>
+        <h4>> Greater than</h4>
+        <h4>< Less than</h4>
+        <h4>>= Greater than or equal to</h4>
+        <h4><= Less than or equal to</h4>
+        <h4>? Ternary operator</h4>
+        <p class="subHeading">Logical Operators</p>
+        <h4>&& Logical and</h4>
+        <h4>|| Logical or</h4>
+        <h4>! Logical not</h4>
+        <p class="subHeading">Bitwise Operators</p>
+        <h4>& AND statement</h4>
+        <h4>| OR statement</h4>
+        <h4>~ NOT</h4>
+        <h4>^ XOR</h4>
+        <h4><< Left shift</h4>
+        <h4>>> Right shift</h4>
+        <h4>>>> Zero fill right shift</h4>
+      </div>
+
+
+
+
+      
+      <!--FUNCTIONS-->
+      <div id="functions" class="moreExplanation hidden">
+        <hr>
+        <h3>Functions</h3>
+        
+        <p><code>function name(parameter1, parameter2, parameter3) {<br>
+          // what the function does<br>
+          }
+          </code></p>
+        <p class="subHeading">Outputting Data</p>
+        <h4>alert()</h4>
+        <p>Output data in an alert box in the browser window.</p>
+        <h4>confirm()</h4>
+        <p>Opens up a yes/no dialog and returns true/false depending on user click.</p>
+        <h4>console.log()</h4>
+        <p>Writes information to the browser console, good for debugging purposes.</p>
+        <h4>document.write()</h4>
+        <p>Write directly to the HTML document.</p>
+        <h4>prompt()</h4>
+        <p>Creates an dialogue for user input.</p><br>
+        <p class="subHeading">Global Functions</p>
+        <h4>decodeURI()</h4>
+        <p>Decodes a Uniform Resource Identifier (URI) created by encodeURI or similar.</p>
+        <h4>decodeURIComponent()</h4>
+        <p>Decodes a URI component.</p>
+        <h4>encodeURI()</h4>
+        <p>Encodes a URI into UTF-8.</p>
+        <h4>encodeURIComponent()</h4>
+        <p>Same but for URI components.</p>
+        <h4>eval()</h4>
+        <p>Evaluates JavaScript code represented as a string.</p>
+        <h4>isFinite()</h4>
+        <p>Determines whether a passed value is a finite number.</p>
+        <h4>isNaN()</h4>
+        <p>Determines whether a value is NaN or no.</p>
+        <h4>Number()</h4>
+        <p>Returns a number converted from its argument.</p>
+        <h4>parseFloat()</h4>
+        <p>Parses an argument and returns a floating point number.</p>
+        <h4>parseInt()</h4>
+        <p>Parses its argument and returns an integer.</p>
+      </div>
+
+
+
+
+      
+      <!--LOOPS-->
+      <div id="loops" class="moreExplanation hidden">
+        <hr>
+        <h3>Loops</h3>
+        
+        <p><code>for (before loop; condition for loop; execute after loop) {<br>
+          // what to do during the loop<br>
+          }
+          </code></p>
+        <h4>for</h4>
+        <p>The most common way to create a loop in Javascript.</p>
+        <h4>while</h4>
+        <p>Sets up conditions under which a loop executes.</p>
+        <h4>do while</h4>
+        <p>Similar to the while loop, however, it executes at least once and performs a check at the end to 
+          see if the condition is met to execute again.</p>
+        <h4>break</h4>
+        <p>Used to stop and exit the cycle at certain conditions.</p>
+        <h4>continue</h4>
+        <p>Skip parts of the cycle if certain conditions are met.</p><br>
+    </div>
+
+
+
+
+
+    <!--IF ELSE-->
+    <div id="ifelse" class="moreExplanation hidden">
+      <hr>
+      <h3>If-Else Statements</h3>
+      <h4><code>if (condition) {<br>
+        // what to do if condition is met<br>
+        } else {<br>
+        // what to do if condition is not met<br>
+        }<br>
+        </code></h4>
+    </div>
+
+
+      <!--STRINGS-->
+      <div id="strings" class="moreExplanation hidden">
+        <hr>
+        <h3>Strings</h3>
+        
+        <p>var person = "John Doe";</p>
+        <p class="subHeading">Escape Characters</p>
+        <h4>\' — Single quote</h4>
+        <h4>\" — Double quote</h4>
+        <h4>\\ — Backslash</h4>
+        <h4>\b — Backspace</h4>
+        <h4>\f — Form feed</h4>
+        <h4>\n — New line</h4>
+        <h4>\r — Carriage return</h4>
+        <h4>\t — Horizontal tabulator</h4>
+        <h4>\v — Vertical tabulator</h4>
+        <p class="subHeading">String Methods</p>
+        <h4>charAt()</h4>
+        <p>Returns a character at a specified position inside a string.</p>
+        <h4>charCodeAt()</h4>
+        <p>Gives you the unicode of character at that position.</p>
+        <h4>concat()</h4>
+        <p>Concatenates (joins) two or more strings into one.</p>
+        <h4>fromCharCode()</h4>
+        <p>Returns a string created from the specified sequence of UTF-16 code units.</p>
+        <h4>indexOf()</h4>
+        <p>Provides the position of the first occurrence of a specified text within a string.</p>
+        <h4>lastIndexOf()</h4>
+        <p>Same as indexOf() but with the last occurrence, searching backwards.</p>
+        <h4>match()</h4>
+        <p>Retrieves the matches of a string against a search pattern.</p>
+        <h4>replace()</h4>
+        <p>Find and replace specific text in a string.</p>
+        <h4>search()</h4>
+        <p>Executes a search for a matching text and returns its position.</p>
+        <h4>slice()</h4>
+        <p>Extracts a section of a string and returns it as a new string.</p>
+        <h4>split()</h4>
+        <p>Splits a string object into an array of strings at a specified position.</p>
+        <h4>substr()</h4>
+        <p>Similar to slice() but extracts a substring depended on a specified number of characters.</p>
+        <h4>substring()</h4>
+        <p>Also similar to slice() but can't accept negative indices.</p>
+        <h4>toLowerCase()</h4>
+        <p>Convert strings to lowercase.</p>
+        <h4>toUpperCase()</h4>
+        <p>Convert strings to uppercase.</p>
+        <h4>valueOf()</h4>
+        <p>Returns the primitive value (that has no properties or methods) of a string object.</p>
+      </div>
+
+
+
+
+      
+      <!--REGULAR EXPRESSIONS-->
+      <div id="regularExpressions" class="moreExplanation hidden">
+        <hr>
+        <h3>Regular Expressions</h3>
+        <p class="subHeading">Pattern Modifiers</p>
+        <h4>e — Evaluate replacement</h4>
+        <h4>i — Perform case-insensitive matching</h4>
+        <h4>g — Perform global matching</h4>
+        <h4>m — Perform multiple line matching</h4>
+        <h4>s — Treat strings as single line</h4>
+        <h4>x — Allow comments and whitespace in pattern</h4>
+        <h4>U — Non Greedy pattern</h4>
+        <p class="subHeading">Brackets</p>
+        <h4>[abc] Find any of the characters between the brackets</h4>
+        <h4>[^abc] Find any character not in the brackets</h4>
+        <h4>[0-9] Used to find any digit from 0 to 9</h4>
+        <h4>[A-z] Find any character from uppercase A to lowercase z</h4>
+        <h4>(a|b|c) Find any of the alternatives separated with |</h4>
+        <p class="subHeading">Metacharacters</p>
+        <h4>. — Find a single character, except newline or line terminator</h4>
+        <h4>\w — Word character</h4>
+        <h4>\W — Non-word character</h4>
+        <h4>\d — A digit</h4>
+        <h4>\D — A non-digit character</h4>
+        <h4>\s — Whitespace character</h4>
+        <h4>\S — Non-whitespace character</h4>
+        <h4>\b — Find a match at the beginning/end of a word</h4>
+        <h4>\B — A match not at the beginning/end of a word</h4>
+        <h4>\0 — NUL character</h4>
+        <h4>\n — A new line character</h4>
+        <h4>\f — Form feed character</h4>
+        <h4>\r — Carriage return character</h4>
+        <h4>\t — Tab character</h4>
+        <h4>\v — Vertical tab character</h4>
+        <h4>\xxx — The character specified by an octal number xxx</h4>
+        <h4>\xdd — Character specified by a hexadecimal number dd</h4>
+        <h4>\uxxxx — The Unicode character specified by a hexadecimal number xxxx</h4>
+        <p class="subHeading">Quantifiers</p>
+        <h4>n+ — Matches any string that contains at least one n</h4>
+        <h4>n* — Any string that contains zero or more occurrences of n</h4>
+        <h4>n? — A string that contains zero or one occurrences of n</h4>
+        <h4>n{X} — String that contains a sequence of X n's</h4>
+        <h4>n{X,Y} — Strings that contains a sequence of X to Y n's</h4>
+        <h4>n{X,} — Matches any string that contains a sequence of at least X n's</h4>
+        <h4>n$ — Any string with n at the end of it</h4>
+        <h4>^n — String with n at the beginning of it</h4>
+        <h4>?=n — Any string that is followed by a specific string n</h4>
+        <h4>?!n — String that is not followed by a specific string n</h4>
+      </div>
+
+
+
+  </div>
+
+  </section>
+
+
+<script src="javascriptSheetScripts.js" defer></script>
+</body>
+</html>
