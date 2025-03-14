@@ -1,66 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Sand</title>
-  <link rel="stylesheet" href="mainStyles.css">
-  <link rel="icon" href="images/SandBlock.png" type="image/icon type">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/index.js" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    
 </head>
 <body>
-
-  <!-- Header Section -->
-  <header class="header">
-    <a href="index.html"><img class="sandLogo" src="images/SandBlock.png"></a>
-    <nav>
-      <ul id="nav-links">
-        <li id="home"><a href="index.html">Home</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-      <!-- Hamburger Button -->
-      <button id="menu-toggle" class="menu-toggle">
-        <span></span>
-        <span></span>
-      </button>
-    </nav>
-  </header>
-
-  <!-- Main Section (Hero) -->
-  <section class="hero">
-    <h1>Welcome to my website</h1>
-    <div class="image-container">
-      <img class="hoo" src="images/Hoo2.png">
-      <img class="speech-bubble" src="images/speechBubble.png" alt="Speech Bubble">
+    
+    <div class="container">
+        <h2 id="form-title">Login</h2>
+        <input type="text" id="username" placeholder="Username" style="display: none;">
+        <input type="email" id="email" placeholder="Email">
+        <input type="text" id="phone" placeholder="Phone Number" style="display: none;">
+        <select id="role" style="display: none;">
+            <option value="" disabled selected>Please select your role</option>
+            <option value="renter">Renter</option>
+            <option value="owner">Owner</option>
+        </select>
+        <button onclick="submitForm()">Login</button>
+        <p id="message"></p>
+        <p class="switch" onclick="toggleForm()">Don't have an account? Sign up</p>
     </div>
-    <p>hover over the image above to see a cool effect.<br>...Or just press the button below to get started.</p>
-    <button id="cta-button" onclick="scrollToFeatures()">Get Started</button>
-  </section>
 
-  <!-- Features Section -->
-  
-  <section id="features" class="features hidden">
-    <h2>Features(for now)</h2>
-    <div class="features-container">
-      <a href="htmlSheet.html">
-      <div class="feature">
-        <h3>HTML Cheat Sheet</h3>
-        <p>Commonly used HTML tags to help in the process of learning HTML.</p>
-      </div></a>
-      <a href="cssSheet.html">
-      <div class="feature">
-        <h3>CSS Cheat Sheet</h3>
-        <p>Commonly used CSS properties to help in the process of learning CSS.</p>
-      </div></a>
-      <a href="javascriptSheet.html">
-      <div class="feature">
-        <h3>Javascript Cheat Sheet</h3>
-        <p>A list consisting of javascript operators and functions.</p>
-      </div></a>
-    </div>
-  </section>
-
-
-<script src="mainScripts.js" defer></script>
 </body>
 </html>
